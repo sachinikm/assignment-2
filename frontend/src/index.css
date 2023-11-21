@@ -3,3 +3,36 @@ html, body, .page {
     height: 100vh;
     margin: 0;
 }
+
+body {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+}
+
+/*style for the left side container */
+.page {
+  flex-grow:1;
+  overflow: scroll; /* alllow for scrolling ifcontent is long */
+  padding: 20px; /*add some padding spacing*/
+}
+
+/*syle for right side container (box-A)*/
+.box-A {
+  background-color: #f9f9f9;
+  padding:20px;
+  border: 2px solid #ccc;
+  margin:20px;
+  width: 40%; /* adjust this width as needed*/
+}
+
+/* Style for status box (box-B*/
+.show-status {
+  border:2px solid #ccc;
+  padding: 10px;
+  cursor:pointer;
+  text-align: center;
+  margin: 20px;
+  width:80px;
+}

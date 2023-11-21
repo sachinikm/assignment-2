@@ -9,6 +9,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
+    depends_on:
+      - frontend
+    links:
+      - frontend
       
   frontend:
     build: 
@@ -16,6 +20,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
+    depends_on:
+      - api
     volumes:
       - ./frontend:/app
   
@@ -25,10 +31,15 @@ services:
       dockerfile: Dockerfile
     ports:
       - 5000:5000
+    depends_on:
+      - db
+    links:
+      - db
     volumes:
       - ./api:/app
 
   db:
+    container_name: assignment2_db_container_CSE5006
     image: postgres:15.3-alpine3.18
     ports:
       - 5432:5432

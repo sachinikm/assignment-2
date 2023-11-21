@@ -6,6 +6,10 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
         },
         // DEFINE YOUR MODEL HERE
+        name: {
+            type: Sequelize.STRING,
+            allowNull: false, // nulls are not allowed
+        },
     });
   
     return Contact;
