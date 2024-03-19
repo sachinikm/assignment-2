@@ -12,7 +12,7 @@
 
 - The project has several microservices that are connected to each other. These microservices are NGINX, Frontend, Backend and Database
 - The database shall have two tables, one for contacts called Contacts and one for phone numbers called Phones.
-  • Records from the Contactor table shall contain the fields id (number, Primary Key), name (string)
+  • Records from the Contactor table shall contain the fields id (number, Primary Key), name (string)\n
   • Records from the Phones table shall contain the fields id (number, Primary Key), name (string), number (string), and contactId (number, Foreign Key)
   • Foreign keys shall follow the camel-case naming conven􀆟on (eg a foreign key to the Contacts table would be called contactId). Specify the foreign key name explicitly in associa􀆟ons, as in Lab 07 (there we did foreignKey: 'postId').
   • Each phone number shall belong to one contact, but a single contact can have many phone numbers.
